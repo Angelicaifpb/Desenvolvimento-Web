@@ -89,3 +89,39 @@ footer {
         padding: 18px;
     }
 }
+
+.form-chamado {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    background: var(--cor-branco);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-chamado input,
+.form-chamado select,
+.form-chamado textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.form-chamado button {
+    background: gray;
+    color: var(--cor-branco);
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.form-chamado button:hover {
+    background: var(--cor-ifpb-escuro);
+}
+

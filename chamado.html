@@ -20,8 +20,38 @@
 
     <main>
         <h2>Abrir um novo chamado</h2>
-        <p>Neste protótipo estático, está página apresenta a estrutura onde futuramente será inserido o formulário para registrar um chamado. Nesta estapa só é necessário o título e o parágrafo explicativo.</p>
+        <p>Preencha o formulário abaixo para registrar um chamado no sistema SCM.</p>
+    
+        <form class="form-chamado">
+    
+            <label for="nome">Nome do Usuário:</label>
+            <input type="text" id="nome" name="nome" required>
+    
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="telefone">Telefone / WhatsApp (opcional):</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx">
+    
+            <label for="tipo">Tipo de Problema:</label>
+            <select id="tipo" name="tipo" required>
+                <option value="">Selecione...</option>
+                <option value="manutencao-preventiva">Manutenção Preventiva</option>
+                <option value="manutencao-corretiva">Manutenção Corretiva</option>
+                <option value="suporte-tecnico">Suporte Técnico</option>
+                <option value="instalacao-software">Instalação de Software</option>
+                <option value="hardware">Problema de Hardware</option>
+                <option value="rede">Problema de Rede</option>
+            </select>
+    
+            <label for="descricao">Descrição Detalhada do Problema:</label>
+            <textarea id="descricao" name="descricao" rows="6" required></textarea>
+    
+            <button type="submit">Enviar Chamado</button>
+    
+        </form>
     </main>
+    
 
     <footer>
         <p>2025 - Sistema SCM</p> 
