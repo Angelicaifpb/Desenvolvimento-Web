@@ -718,9 +718,11 @@ footer {
 
     /* CARRINHO */
     .carrinho-flutuante {
+        position: fixed;
         top: auto;
+        right: auto;
         bottom: 20px;
-        right: 20px;
+        left: 20px;
     }
 
     /* BREADCRUMB */
