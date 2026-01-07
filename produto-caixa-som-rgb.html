@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto | InfoTech IFPB</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="top-bar">
+        <img id="logo" src="imgs/ifpb-logo.png" alt="Logo IFPB">
+
+        <nav class="menu">
+            <a href="index.html">Início</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="chamado.html">Abrir Chamado</a>
+            <a href="loja.html">Loja</a>
+        </nav>
+
+        <div class="carrinho-flutuante">
+            🛒 Carrinho
+            <span class="contador">0</span>
+        </div>
+
+    </header>
+
+    <!-- TÍTULO -->
+    <div class="titulo-pagina">
+        <h1>Detalhes do Produto</h1>
+    </div>
+
+    <!-- CONTEÚDO -->
+    <main class="produto-detalhe">
+
+        <nav class="breadcrumb">
+            <a href="index.html">Início</a>
+            <span>›</span>
+            <a href="loja.html">Loja</a>
+            <span>›</span>
+            <span class="atual">Caixas de Som Gamer 2.0 com RGB</span>
+        </nav>
+
+        <section class="produto-info">
+            <img src="imgs/caixa-som-rgb.png" alt="Caixas de Som RGB">
+
+            <div class="produto-texto">
+                <h2>Caixas de Som Gamer 2.0 com RGB</h2>
+
+                <p class="descricao">
+                    Potência sonora e estilo para o seu desktop. Estas caixas compactas
+                    entregam graves profundos e agudos limpos, acompanhadas de uma iluminação
+                    RGB pulsante que sincroniza com a energia do seu jogo.
+                </p>
+
+                <ul class="especificacoes">
+                    <li>Sistema: 2.0 Estéreo</li>
+                    <li>Potência: 10W RMS</li>
+                    <li>Iluminação: LED RGB Dinâmico</li>
+                    <li>Conexão: P2 (Áudio) e USB (Alimentação)</li>
+                </ul>
+
+                <p class="preco-antigo">R$ 199,00</p>
+                <p class="preco-novo">R$ 149,00</p>
+
+                <button class="btn-comprar" data-nome="Caixas de Som Gamer 2.0 RGB" data-preco="149">
+                    Adicionar ao Carrinho
+                </button>
+
+            </div>
+
+        </section>
+    </main>
+
+    <!-- MODAL DO CARRINHO -->
+    <div class="modal-carrinho" id="modalCarrinho">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>Meu Carrinho</h2>
+
+            <ul class="lista-carrinho"></ul>
+
+            <p class="total-carrinho">
+                Total: <strong>R$ <span id="valorTotal">0,00</span></strong>
+            </p>
+
+            <div class="acoes-carrinho">
+                <button class="btn-finalizar">Finalizar Compra</button>
+                <button class="btn-limpar">Limpar Carrinho</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>InfoTech IFPB - 2025</p>
+    </footer>
+
+    <!-- JS DO CARRINHO -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

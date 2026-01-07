@@ -6,21 +6,22 @@
     --branco: #ffffff;
 }
 
+/* Reset Global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
+/* Configurações da página */
+html {
     width: 100%;
     overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    zoom: normal;
+    scroll-behavior: smooth; /* Opcional: deixa a rolagem suave */
 }
 
 body {
+    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--fundo);
     color: var(--texto);
@@ -62,7 +63,123 @@ body {
     font-size: 1.8rem;
 }
 
+.home section {
+    margin-bottom: 40px;
+}
 
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.hero h2 {
+    color: var(--ifpb-verde);
+    margin-bottom: 15px;
+}
+
+.hero-acoes {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Estilo base para ambos os botões */
+.btn-principal,
+.btn-secundario {
+    display: inline-block; 
+    text-decoration: none;
+    padding: 12px 20px;    
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;    
+    cursor: pointer;
+    border: 2px solid transparent; 
+}
+
+/* Cores específicas */
+.btn-principal {
+    background: var(--ifpb-verde);
+    color: #fff;
+    border-color: var(--ifpb-verde);
+}
+
+.btn-secundario {
+    background: transparent;
+    border-color: var(--ifpb-verde);
+    color: var(--ifpb-verde);
+}
+
+/* Efeito de Hover unificado */
+.btn-principal:hover,
+.btn-secundario:hover {
+    transform: scale(1.03);
+}
+
+.btn-principal:hover {
+    background: #007a2f;
+    border-color: #007a2f;
+}
+
+.btn-secundario:hover {
+    background: var(--ifpb-verde);
+    color: #fff;
+}
+
+
+/* ATALHOS */
+.atalhos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.atalho {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.atalho a {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--ifpb-verde);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.atalho:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.atalho a:hover {
+    color: #007a2f;
+    text-decoration: underline;
+}
+
+
+
+/* EQUIPE */
+.equipe {
+    background: #f5f5f5;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.lista-equipe {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lista-equipe li {
+    margin: 8px 0;
+}
 
 main {
     background-color: var(--branco);
@@ -310,6 +427,46 @@ footer {
     background: #007a2f;
 }
 
+.acoes-produto {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.btn-detalhes {
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid #009739;
+    color: #009739;
+    padding: 6px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.btn-detalhes:hover {
+    background: #009739;
+    color: #fff;
+}
+
+.btn-comprar {
+    background: #555;
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-comprar:hover {
+    background: #333;
+}
+
+
+
 /* ============================= */
 /* ===== BADGES ================ */
 /* ============================= */
@@ -339,7 +496,7 @@ footer {
 
 .carrinho-flutuante {
     position: fixed;
-    top: 140px; /* abaixo do header + nav */
+    top: 140px; 
     right: 20px;
     background: var(--ifpb-verde);
     color: var(--branco);
@@ -470,14 +627,43 @@ footer {
     background: #007a2f;
 }
 
+/* ===== BREADCRUMB ===== */
+.breadcrumb {
+    max-width: 1200px;
+    margin: 20px auto 10px;
+    padding: 0 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #009739; /* verde IFPB */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    margin: 0 6px;
+}
+
+.breadcrumb .atual {
+    color: #333;
+    font-weight: 600;
+}
+
+
 
 
 
 /* ============================= */
-/* ===== RESPONSIVO ============ */
+/* ===== TABLET / NOTEBOOK ===== */
 /* ============================= */
-
 @media (max-width: 900px) {
+
     .loja {
         grid-template-columns: 1fr;
     }
@@ -497,22 +683,13 @@ footer {
     }
 }
 
-@media (max-width: 500px) {
-    .filtros button {
-        width: 100%;
-    }
-
-    .produto img {
-        height: 150px;
-    }
-}
-
-
-
+/* ============================= */
+/* ===== CELULAR =============== */
+/* ============================= */
 @media (max-width: 600px) {
 
-
-.top-bar {
+    /* HEADER */
+    .top-bar {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -520,25 +697,53 @@ footer {
         gap: 10px;
     }
 
-#logo {
-        width: 110px;
+    #logo {
+        width: 100px;
         height: auto;
-        margin: 0 auto; 
+        margin: 0 auto;
     }
+    
 
-.menu a {
+    .menu a {
         display: block;
         margin: 6px 0;
         font-size: 1rem;
     }
-main {
+
+    /* MAIN */
+    main {
         margin: 15px;
         padding: 18px;
     }
 
-.carrinho-flutuante {
+    /* CARRINHO */
+    .carrinho-flutuante {
         top: auto;
         bottom: 20px;
         right: 20px;
     }
+
+    /* BREADCRUMB */
+    .breadcrumb {
+        font-size: 13px;
+    }
+
+    /* FILTROS */
+    .filtros button {
+        width: 100%;
+    }
+
+    /* PRODUTOS */
+    .produto img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 500px) { 
+    .filtros button { 
+    width: 100%; 
+    } 
+    .produto img { 
+    height: 150px; 
+    } 
 }

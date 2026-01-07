@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto | InfoTech IFPB</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="top-bar">
+        <img id="logo" src="imgs/ifpb-logo.png" alt="Logo IFPB">
+
+        <nav class="menu">
+            <a href="index.html">Início</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="chamado.html">Abrir Chamado</a>
+            <a href="loja.html">Loja</a>
+        </nav>
+
+        <div class="carrinho-flutuante">
+            🛒 Carrinho
+            <span class="contador">0</span>
+        </div>
+
+    </header>
+
+    <!-- TÍTULO -->
+    <div class="titulo-pagina">
+        <h1>Detalhes do Produto</h1>
+    </div>
+
+    <!-- CONTEÚDO -->
+    <main class="produto-detalhe">
+
+        <nav class="breadcrumb">
+            <a href="index.html">Início</a>
+            <span>›</span>
+            <a href="loja.html">Loja</a>
+            <span>›</span>
+            <span class="atual">Monitor Gamer 24" 144Hz 1ms</span>
+        </nav>
+        
+        <section class="produto-info">
+            <img src="imgs/monitor-144hz.jpg" alt="Monitor 144Hz">
+
+            <div class="produto-texto">
+                <h2>Monitor Gamer 24" 144Hz 1ms</h2>
+
+                <p class="descricao">
+                    Eleve seu nível competitivo com fluidez máxima. Com uma taxa de atualização
+                    de 144Hz e tempo de resposta de 1ms, você terá imagens nítidas sem rastros,
+                    essencial para jogos de FPS e ação rápida.
+                </p>
+
+                <ul class="especificacoes">
+                    <li>Tamanho: 24 Polegadas LED</li>
+                    <li>Taxa de Atualização: 144Hz</li>
+                    <li>Tempo de Resposta: 1ms (GtG)</li>
+                    <li>Entradas: HDMI / DisplayPort</li>
+                </ul>
+
+                <p class="preco-antigo">R$ 1.400,00</p>
+                <p class="preco-novo">R$ 1.150,00</p>
+
+                <button class="btn-comprar" data-nome="Monitor Gamer 24 144Hz 1ms" data-preco="1150">
+                    Adicionar ao Carrinho
+                </button>
+
+            </div>
+
+        </section>
+    </main>
+
+    <!-- MODAL DO CARRINHO -->
+    <div class="modal-carrinho" id="modalCarrinho">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>Meu Carrinho</h2>
+
+            <ul class="lista-carrinho"></ul>
+
+            <p class="total-carrinho">
+                Total: <strong>R$ <span id="valorTotal">0,00</span></strong>
+            </p>
+
+            <div class="acoes-carrinho">
+                <button class="btn-finalizar">Finalizar Compra</button>
+                <button class="btn-limpar">Limpar Carrinho</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>InfoTech IFPB - 2025</p>
+    </footer>
+
+    <!-- JS DO CARRINHO -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

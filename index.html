@@ -12,11 +12,18 @@
     <header class="top-bar">
         <img id="logo" src="imgs/ifpb-logo.png" alt="Logo IFPB">
 
-        <div class="menu">
+        <nav class="menu">
             <a href="index.html">Início</a>
             <a href="servicos.html">Serviços</a>
             <a href="chamado.html">Abrir Chamado</a>
+            <a href="loja.html">Loja</a>
+        </nav>
+
+        <div class="carrinho-flutuante">
+            🛒 Carrinho
+            <span class="contador">0</span>
         </div>
+
     </header>
 
     <div class="titulo-pagina">
@@ -24,15 +31,95 @@
     </div>
 
 
-    <main>
-        <h2>Bem-vindo ao Sistema de Controle de Manutenção</h2>
-        <p>Esta é a página inicial do protótipo estático do SCM. Aqui você encontra acesso rápido aos serviços e à
-            abertura de chamados</p>
+    <main class="home">
+
+        <!-- APRESENTAÇÃO -->
+        <section class="hero">
+            <h2>Sistema de Controle de Manutenção</h2>
+            <p>
+                O InfoTech IFPB é um protótipo de sistema web desenvolvido para gerenciar
+                serviços de manutenção, abertura de chamados e venda de produtos de tecnologia.
+            </p>
+
+            <div class="hero-acoes">
+                <a href="servicos.html" class="btn-principal">Ver Serviços</a>
+                <a href="chamado.html" class="btn-secundario">Abrir Chamado</a>
+            </div>
+        </section>
+
+        <!-- SOBRE O SISTEMA -->
+        <section class="sobre">
+            <h3>Sobre o Projeto</h3>
+            <p>
+                Este projeto foi desenvolvido como parte das atividades do curso,
+                aplicando conceitos de HTML, CSS e JavaScript para criação de uma aplicação
+                web estática com foco em usabilidade e organização.
+            </p>
+        </section>
+
+        <!-- ACESSOS RÁPIDOS -->
+        <section class="atalhos">
+            <div class="atalho">
+                <h4>🛠 Serviços</h4>
+                <p>Conheça os serviços de manutenção e suporte técnico.</p>
+                <a href="servicos.html">Acessar</a>
+            </div>
+
+            <div class="atalho">
+                <h4>🛒 Loja</h4>
+                <p>Veja nossos produtos e periféricos disponíveis.</p>
+                <a href="loja.html">Acessar</a>
+            </div>
+
+            <div class="atalho">
+                <h4>📋 Chamados</h4>
+                <p>Abra um chamado de forma rápida e prática.</p>
+                <a href="chamado.html">Acessar</a>
+            </div>
+        </section>
+
+        <!-- EQUIPE -->
+        <section class="equipe">
+            <h2>Equipe Responsável pelo Projeto</h2>
+
+            <div class="integrante">
+                <h3>Angélica Bruno Lopes Gonçalves</h3>
+                <p>Responsável pelo desenvolvimento Front-end, estilização e interatividade do sistema.</p>
+            </div>
+
+            <div class="integrante">
+                <h3>Roberta Ramalho de Santana</h3>
+                <p>Responsável pela estrutura HTML, organização do layout e base das páginas.</p>
+            </div>
+        </section>
+
+
     </main>
+
+
+    <div class="modal-carrinho" id="modalCarrinho">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>Meu Carrinho</h2>
+
+            <ul class="lista-carrinho"></ul>
+
+            <p class="total-carrinho">
+                Total: <strong>R$ <span id="valorTotal">0,00</span></strong>
+            </p>
+
+            <div class="acoes-carrinho">
+                <button class="btn-finalizar">Finalizar Compra</button>
+                <button class="btn-limpar">Limpar Carrinho</button>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <p>InfoTech IFPB - 2025</p>
     </footer>
+
+    <script src="js/script.js"></script>
 
 </body>
 
