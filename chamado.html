@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema SCM - Abrir Chamado</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 
@@ -20,7 +22,7 @@
         </nav>
     </header>
 
- 
+
     <div class="titulo-pagina">
         <h1>Abertura de Chamado</h1>
     </div>
@@ -28,18 +30,18 @@
     <main>
         <h2>Abrir um novo chamado</h2>
         <p>Preencha o formulário abaixo para registrar um chamado no sistema SCM.</p>
-    
+
         <form class="form-chamado">
-    
+
             <label for="nome">Nome do Usuário:</label>
             <input type="text" id="nome" name="nome" required>
-    
+
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" required>
-    
+
             <label for="telefone">Telefone / WhatsApp (opcional):</label>
             <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx">
-    
+
             <label for="tipo">Tipo de Problema:</label>
             <select id="tipo" name="tipo" required>
                 <option value="">Selecione...</option>
@@ -50,18 +52,24 @@
                 <option value="hardware">Problema de Hardware</option>
                 <option value="rede">Problema de Rede</option>
             </select>
-    
+
             <label for="descricao">Descrição Detalhada do Problema:</label>
             <textarea id="descricao" name="descricao" rows="6" required></textarea>
-    
+
             <button type="submit">Enviar Chamado</button>
-    
+
         </form>
     </main>
-    
+
     <footer>
-        <p>InfoTech IFPB - 2025</p> 
+        <p>InfoTech IFPB - 2025</p>
     </footer>
 
+    <!-- CHATBOT -->
+    <script> window.chtlConfig = { chatbotId: "7443424277" } </script>
+    <script async data-id="7443424277" id="chtl-script" type="text/javascript"
+        src="https://chatling.ai/js/embed.js"></script>
+
 </body>
+
 </html>
